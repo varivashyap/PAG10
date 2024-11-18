@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 10
+names: ['ball', 'corner-kick', 'free-kick', 'goalkeeper', 'player', 'red-card', 'referee', 'shooting', 'substitution', 'yellow-card']
+
+roboflow:
+  workspace: greg-statton-eahnn
+  project: youthsoccermatch
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/greg-statton-eahnn/youthsoccermatch/dataset/2
