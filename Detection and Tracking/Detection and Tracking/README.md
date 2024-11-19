@@ -1,4 +1,4 @@
-# Track football players with YOlOv8 and ByteTrack <!-- omit from toc -->
+# Track football players with YOlOv5 and ByteTrack <!-- omit from toc -->
 
 
 Football automated analytics is hot topics in the intersection between AI and sports. In this project, we build a tool for detecting and tracking football players, referees and ball in videos. For this we use [YOLOv5](https://github.com/ultralytics/ultralytics) (a popular and fast object detector) for detecting the players in each frame of the video, and [ByteTrack](https://github.com/ifzhang/ByteTrack) a multi object detection model released in 2022 to identify the players and track their trajectory.
@@ -6,7 +6,7 @@ Football automated analytics is hot topics in the intersection between AI and sp
 ## YOLOv5 training
 
 The first part of the project is to train YOLOv5 on detecting players in images.
- The model was trained for 300 epochs on 204 images with a resolution of 640x640.
+The model was trained for 300 epochs on 204 images with a resolution of 640x640.
 
 The model has trouble detecting the ball due to its small size. One of the solutions is to increase the network resolution to 1280x1280. However, it requires resources beyond my reach.  
 The alternative was to train a YOLOv5m on 1280 resolution. Evaluation tables bellow show that has 60% better mAP50-95. However, it confuses the referees and players more often (as seen on the demo video).
