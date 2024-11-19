@@ -1,7 +1,6 @@
-##Event Detection Using YOLOV5
+# Event Detection Using YOLOV5
 
-
-#YOLOv8 training:
+## YOLOv8 training
 
 The first part of the project is to train YOLOv8 on detecting events in images. The model was trained for 10 epochs on 204 images with a resolution of 800x800.
 
