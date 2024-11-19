@@ -1,4 +1,4 @@
-# Event Detection Using YOLOV8
+# Event Detection Using YOLOv8
 
 ## YOLOv8 training
 
