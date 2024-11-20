@@ -1,16 +1,22 @@
+
 import cv2
+import os
+from roboflow import Roboflow
+import numpy as np
+import matplotlib.pyplot as plt
+import re
 from ultralytics import YOLO
-import pandas as pd
 
 
-
-def detect_events(video_path):
+def output_detection(video_path):
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
+
     model = YOLO("/home/urvashi2022/Desktop/UI_DEVELOPMENT/DetectionMoreEvents/runs/detect/train10/weights/best.pt")
     frames_to_skip = 20
     frame_num = 0
 
+    import pandas as pd
     df = pd.DataFrame(columns=['Current time', 'Frame number', 'Event type', 'Confidence'])
 
 
@@ -47,24 +53,19 @@ def detect_events(video_path):
 
                     
 
+
+    #remove repetitive rows in columns current time
     df = df.drop_duplicates(subset=['Current time'])
     # reindex the dataframe
     df = df.reset_index(drop=True)
     #convert time from seconds to minutes and seconds
     df['Current time'] = df['Current time'].apply(lambda x: f"{int(x//60)}:{int(x%60)}")
-    df
+    
 
     print(df)
 
-
-    # count the number of times each event type occurs
-    event_counts = df['Event type'].value_counts()
-    event_counts
-
-    Cols = ['Action', 'Corner-kick', 'Free-kick', 'Red-card', 'Shooting', 'Substitution', 'Yellow-card']
-
-
-
+    Cols = ['Action', 'Corner-kick', 'Red-card', 'Shooting', 'Substitution', 'Yellow-card']
+    
     event_type_counts = pd.DataFrame(columns=Cols)
     event_type_counts['Action'] = ['Count of Action']
     event_type_counts = event_type_counts.fillna(0)
@@ -73,19 +74,19 @@ def detect_events(video_path):
     # count the number of times each event type occurs for each class in the class_names list
     for class_name in Cols:
         if class_name != 'Action':
-            # find the number if types the event the class_name occurs
+            # Find the number of times the event of class_name occurs
             event_counts = df[df['Event type'] == class_name]['Event type'].value_counts()
-            # store the frequency in a single variable int type
-            if class_name in event_counts:
-                event_count = event_counts[class_name]
-                # put event_count in the corresponding column of the event_type_counts dataframe
-                event_type_counts[class_name] = event_count
-                
+            
+            # Assign the count or set it to 0 if the event type is not found
+            event_count = event_counts[class_name] if class_name in event_counts else 0
+            
+            # Store event_count in the corresponding column of the event_type_counts DataFrame
+            event_type_counts[class_name] = event_count
+
+            
 
 
-    # save df to csv file
-    event_type_counts.to_csv("detections.csv")
+    event_counts.to_csv("detection_results.csv")
 
-detect_events("/home/urvashi2022/Desktop/UI_DEVELOPMENT/DetectionMoreEvents/dataset/demo.mp4")
-
+    return df
 
