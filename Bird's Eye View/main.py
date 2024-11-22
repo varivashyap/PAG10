@@ -9,5 +9,5 @@ def birdEyeView(input_video):
     run(**vars(opt))
     return Path("video.mp4")
 
-input_video = "/home/urvashi2022/Documents/Soccer-Player-Tracking-YoloV5/birdEyeView/data/videos/demo-s.mp4"
+input_video = "data/videos/demo-s.mp4"
 output_video = birdEyeView(input_video)
