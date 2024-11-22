@@ -10,6 +10,7 @@ YOLOv5 is a family of object detection architectures and models pretrained on th
 This project is based on the Pytorch implementation of YOLOv5.
 
 `detect.py` runs YOLOv5 inference on a variety of sources. `yolov5_soccer_player_tracking.ipynb` downloads models automatically from the [latest YOLOv5 release](https://github.com/ultralytics/yolov5/releases), and saves results to `runs/detect`.
+
 <br>
 
 # High level overview of how it works
