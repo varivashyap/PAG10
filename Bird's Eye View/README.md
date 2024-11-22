@@ -17,11 +17,6 @@ This project is based on the Pytorch implementation of YOLOv5.
 - The pretrained weights of the Yolov5 model work quite neat.
 - We incorporate SORT (Simple Online and Realtime Tracking) [SORT](https://github.com/abewley/sort) algorithm for object tracking. 
 - Transform the corner field view to a 2D top view of the field.
-<br>
-
-
-# Conclusion
-Yolov5 is quite accurate in tracking the ball and the players.
 
 <br>
 
