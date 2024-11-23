@@ -48,4 +48,5 @@ SoccerNet Ball-Action Spotting Dataset) (ResNet-512)
 We used a Gemini 1.5 Flash API Key to report some basic statistical analysis of the metrics data 
 that was extracted previously. 
 
-User Interface: We used Streamlit to create the website.
+## User Interface 
+We used Streamlit to create the website.
