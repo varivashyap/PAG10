@@ -42,8 +42,9 @@ The following metrics are to be extracted from the video.
 SoccerNet Ball-Action Spotting Dataset) (ResNet-512) 
 - Shots on target, Shots off target, Fouls, Corner, Yellow card, Red card, Yellow to red card 
 (using labelled data from the SoccerNet Action Spotting Dataset) (ResNet-512) 
-- Possession (Based on pass and interception data)  
-Performance Metrics Analysis 
+- Possession (Based on pass and interception data)
+  
+## Performance Metrics Analysis 
 We used a Gemini 1.5 Flash API Key to report some basic statistical analysis of the metrics data 
 that was extracted previously. 
 User Interface 
