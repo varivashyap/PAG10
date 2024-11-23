@@ -19,3 +19,20 @@ Run the following command:
 bash
 streamlit run soccer_analysis.py
 The application will launch in your default web browser.
+
+## Features
+The application provides the following functionalities:
+
+## Player Analysis:
+Detailed analysis of individual players based on metrics like goals, fouls, and possession.
+## Team Analysis:
+Comprehensive team performance analysis.
+## Match Statistics:
+Compare team performance across different matches.
+## Video Analysis:
+### Tracking: Analyze player movements.
+### Action Detection: Identify key actions during the match.
+### Bird's Eye View: Visualize player positioning from an overhead perspective.
+
+## Note
+Ensure all dependencies are properly installed before running the application. Follow the requirements.txt files in each folder for guidance. The application requires an active API key to function correctly.
