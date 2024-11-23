@@ -36,13 +36,15 @@ into real-world coordinates
 on a homography matrix
 
 ## Performance Metrics 
-The following metrics are to be extracted from the video. 
+We aim to extract the following metrics from the video. 
 - Speed (calculated using the Bird’s Eye View with player identification and tracking) 
 - Pass, Header, High pass, Out, Shot, Interception, Goal (using labelled data from the 
 SoccerNet Ball-Action Spotting Dataset) (ResNet-512) 
 - Shots on target, Shots off target, Fouls, Corner, Yellow card, Red card, Yellow to red card 
 (using labelled data from the SoccerNet Action Spotting Dataset) (ResNet-512) 
 - Possession (Based on pass and interception data)
+
+We chose to output only those metrics that gave good accuracy.
   
 ## Performance Metrics Analysis 
 We used a Gemini 1.5 Flash API Key to report some basic statistical analysis of the metrics data 
