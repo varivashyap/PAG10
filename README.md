@@ -52,3 +52,6 @@ that was extracted previously.
 
 ## User Interface 
 We used Streamlit to create the website.
+
+## How to run 
+To run the code ,import all the folder in the folder named tracking which is inside 
