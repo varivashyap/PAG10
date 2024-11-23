@@ -43,6 +43,7 @@ SoccerNet Ball-Action Spotting Dataset) (ResNet-512)
 - Shots on target, Shots off target, Fouls, Corner, Yellow card, Red card, Yellow to red card 
 (using labelled data from the SoccerNet Action Spotting Dataset) (ResNet-512) 
 - Possession (Based on pass and interception data)
+  
 We output those metrics that gave accuracy above a certain threshold.
   
 ## Performance Metrics Analysis 
