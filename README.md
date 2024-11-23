@@ -1,5 +1,4 @@
-# Group-10
-PERFORMANCE ANALYZER
+# PERFORMANCE ANALYZER
 
 Goal: To analyze a soccer match by tracking the players, the ball, and the referee and extracting 
 useful performance metrics that help assess the game 
@@ -27,13 +26,15 @@ Create tracklets of players by associating the detections across frames to track
 and assign unique ids to them 
 4. Tracklet Consistency:  
 Ensures consistency over time for various attributes using majority voting to correct any 
-momentary detection errors 
+momentary detection errors
+
 Bird’s Eye View 
 1. Pitch Localization: Localizing pitch by detecting the field's lines 
 2. Camera Calibration: Calibrating the camera for translating image coordinates 
 into real-world coordinates 
 3. Perspective Transformation: Transforming tracklets into 2D positions on the pitch based 
-on a homography matrix 
+on a homography matrix
+
 Performance Metrics 
 The following metrics are to be extracted from the video. 
 - Speed (calculated using the Bird’s Eye View with player identification and tracking) 
